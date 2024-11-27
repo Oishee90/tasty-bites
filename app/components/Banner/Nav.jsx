@@ -82,25 +82,25 @@ const Navbar = () => {
               <div className="flex flex-col text-xl font-bold md:flex-row md:mx-6">
                 <a
                   href="#"
-                  className="my-2 text-red-600  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className="my-2 text-[#E22626] transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
                 >
                   Home
                 </a>
                 <a
                   href="#"
-                  className="my-2 text-xl  text-red-600  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className="my-2 text-xl  text-[#E22626]  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
                 >
                   Shop
                 </a>
                 <a
                   href="#"
-                  className="my-2 text-red-600  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className="my-2 text-[#E22626]  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
                 >
                   Contact
                 </a>
                 <a
                   href="#"
-                  className="my-2 text-red-600 transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className="my-2 text-[#E22626] transition-colors duration-300 transform dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 md:mx-4 md:my-0"
                 >
                   About
                 </a>
@@ -109,7 +109,7 @@ const Navbar = () => {
               <div className="flex justify-center md:block">
                 <a
                   href="#"
-                  className="relative text-[#17ad53] transition-colors duration-300 transform hover:text-green-500 dark:hover:text-green-400 dark:text-gray-200 "
+                  className="relative text-[#E22626] transition-colors duration-300 transform hover:text-green-500 dark:hover:text-green-400 dark:text-gray-200 "
                 >
                   <svg
                     className="w-5 h-5"

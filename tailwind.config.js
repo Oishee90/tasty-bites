@@ -6,9 +6,9 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-     
-    },
+    extend: {},
   },
   plugins: [],
+  safelist: ["group", "group-hover", "group-active", "w-full", "text-white"], // Ensure safelist
 };
+
