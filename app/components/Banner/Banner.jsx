@@ -57,6 +57,12 @@ const Banner = () => {
         { opacity: 1, y: 0, duration: 0.8 },
         "-=0.5"
       ) // Top Bun
+      .fromTo(
+        ".seal",
+        { opacity: 0, y: -200 },
+        { opacity: 1, y: 0, duration: 0.8 },
+        "-=0.5"
+      ) // Top Bun
  
 
 
@@ -70,24 +76,24 @@ const Banner = () => {
       {/* Banner Section with Yellow Background */}
       <div className="bg-yellow-400 h-[600px] md:h-[600px] flex flex-col-reverse md:flex-row justify-between items-start">
         {/* Content Section */}
-        <div className="md:content w-full text-center md:text-left md:w-1/2 px-6 md:mt-32 mt-5">
+        <div className="content w-full text-center md:text-left md:w-1/2 px-6 md:mt-32 mt-5">
   {/* Badge */}
   <span className="mt-2 whitespace-nowrap text-left rounded-full bg-green-500 px-3 py-1 text-sm text-white">
     New Menu
   </span>
 
   <h1 className="text-2xl w-full md:text-6xl font-bold text-black dark:text-gray-100">
-  <span className="text-[#E22626]">TastyBites  </span><br />
-      <span className="inline-block">
-        <Typewriter
-          words={['Awaits Your Cravings!']}
+  <span className="text-[#E22626]"> <Typewriter
+          words={['TastyBites']}
           loop={false} // Runs only once
           cursor
           cursorStyle="|"
           typeSpeed={70} // Typing speed
           deleteSpeed={50} // Deleting speed
           delaySpeed={1000} // Delay before re-typing
-        />
+        /> </span><br />
+      <span className="inline-block">
+      Awaits Your Cravings!
       </span>
   </h1>
   <p className="text-base md:text-xl mt-2 text-white dark:text-gray-300">
@@ -113,7 +119,7 @@ const Banner = () => {
 
 <div className="flex flex-row">
         {/* Burger Animation Section */}
-        <div className="burger-container hidden   relative w-[400px] h-[300px] md:w-[600px] md:h-[500px]  md:mt-10 lg:flex justify-center mr-5">
+        <div className="burger-container   relative w-[400px] h-[300px] md:w-[600px] md:h-[500px]  md:mt-10 flex justify-center mr-5">
   {/* Bottom Bun */}
   <div></div>
   <Image
@@ -158,6 +164,40 @@ const Banner = () => {
     height={50}
     priority
   />
+ 
+  <div className="seal offer-seal absolute top-[80px] left-[60px] md:left-[80px] w-[100px] h-[100px] md:w-[120px] md:h-[120px] bg-[#E22626] rounded-full flex items-center justify-center shadow-lg transform rotate-[-15deg]">
+  
+  <svg
+    className="absolute w-[120px] h-[120px] md:w-[150px] md:h-[150px]"
+    viewBox="0 0 150 150"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="75"
+      cy="75"
+      r="70"
+      stroke="white"
+      strokeWidth="8"
+      fill="none"
+    />
+    <circle
+      cx="75"
+      cy="75"
+      r="60"
+      stroke="#E22626"
+      strokeWidth="6"
+      fill="none"
+    />
+  </svg> <span className="text-white text-center text-xs md:text-sm font-bold">
+  <span className="text-yellow-500 text-lg md:text-xl">🔥</span>
+  25% OFF
+  <br />
+  on Spicy Delight Burger!
+</span>
+
+    </div>
+
+
   {/* card */}
    {/* Cards - Positioned on the right side */}
  
