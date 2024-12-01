@@ -72,9 +72,9 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="relative border-white border">
+    <div className="relative bg-[#FB9300] border-white border">
       {/* Banner Section with Yellow Background */}
-      <div className="bg-yellow-400 h-[600px] md:h-[600px] flex flex-col-reverse md:flex-row justify-between items-start">
+      <div className=" h-[600px] md:h-[600px] flex flex-col-reverse md:flex-row justify-between items-start">
         {/* Content Section */}
         <div className="content w-full text-center md:text-left md:w-1/2 px-6 md:mt-32 mt-5">
   {/* Badge */}
@@ -83,7 +83,7 @@ const Banner = () => {
   </span>
 
   <h1 className="text-2xl w-full md:text-6xl font-bold text-black dark:text-gray-100">
-  <span className="text-[#E22626]"> <Typewriter
+  <span className="text-[#FFFFFF] md: mb-3"> <Typewriter
           words={['TastyBites']}
           loop={false} // Runs only once
           cursor
@@ -92,17 +92,17 @@ const Banner = () => {
           deleteSpeed={50} // Deleting speed
           delaySpeed={1000} // Delay before re-typing
         /> </span><br />
-      <span className="inline-block">
+      <span className="inline-block md:mt-3">
       Awaits Your Cravings!
       </span>
   </h1>
-  <p className="text-base md:text-xl mt-2 text-white dark:text-gray-300">
+  <p className="text-base md:text-xl mt-3 text-white dark:text-gray-300">
     Unleash the Chef in You with Our Latest Dishes.
   </p>
 
   {/* Button */}
 {/* Base Button */}
-<div className="mt-2 mb-5 cursor-pointer">
+<div className="mt-4 mb-5 cursor-pointer">
 <button
   type="button"
   className="p-2 btn md:px-6 md:py-3 lg:px-8 lg:py-4 font-semibold text-sm md:text-xl   rounded-xl bg-[#E22626] hover:cursor-pointer  dark:border-green-800 text-gray-100 dark:text-gray-800"
