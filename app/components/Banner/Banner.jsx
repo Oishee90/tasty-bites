@@ -8,8 +8,9 @@ const Banner = () => {
     
     // GSAP Animation for SVG Path
     gsap.to(".curved-path", {
-      duration: 4,
-      repeat: -1,
+      duration: 1,
+      repeat: -2,
+      ease: "power1.inOut",
       yoyo: true,
       attr: {
         d: "M0,180 C 200,220, 400,230, 600,210 C 800,180, 1000,240, 1200,210 C 1400,160, 1600,190, 1600,190 L 1600,320 L 0,320 Z",
@@ -103,11 +104,11 @@ const Banner = () => {
   {/* Button */}
 {/* Base Button */}
 <div className="mt-4 mb-5 cursor-pointer">
-<button
-  type="button"
-  className="p-2 btn md:px-6 md:py-3 lg:px-8 lg:py-4 font-semibold text-sm md:text-xl   rounded-xl bg-[#E22626] hover:cursor-pointer  dark:border-green-800 text-gray-100 dark:text-gray-800"
->
- Order Now
+<button className="relative px-8 py-3 border-2 border-red-600 rounded-lg bg-none text-white overflow-hidden group transform transition-all duration-500 ease-out hover:translate-x-4 hover:translate-y-2">
+  <span className="relative z-10">Order Now</span>
+  
+  {/* Color fill from bottom-left corner */}
+  <span className="absolute inset-0 bg-red-600 transform scale-x-0 scale-y-0 origin-bottom-left group-hover:scale-x-100 group-hover:scale-y-100 transition-transform duration-500 ease-out"></span>
 </button>
 </div>
 

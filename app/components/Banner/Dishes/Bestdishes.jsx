@@ -3,12 +3,17 @@ import { useEffect, useRef, useState } from "react";
 import "keen-slider/keen-slider.min.css";  // Import KeenSlider CSS
 import KeenSlider from "keen-slider";
 import Image from "next/image";
+import { IoMdArrowForward } from "react-icons/io";
+import { IoArrowBack } from "react-icons/io5";
+import Button from "../Button";
 
 const Bestdishes = () => {
   const [slider, setSlider] = useState(null);
   const keenSliderRef = useRef(null);
   const keenSliderActive = useRef(null);
   const keenSliderCount = useRef(null);
+
+ 
 
   useEffect(() => {
     const keenSliderInstance = new KeenSlider(keenSliderRef.current, {
@@ -156,37 +161,58 @@ const Bestdishes = () => {
               </div>
 
               {/* Third Slide */}
-              <div className="keen-slider__slide opacity-40 rounded-full transition-opacity duration-500">
-                <blockquote className="rounded-3xl  p-6  ">
-                <div className="rounded-full overflow-hidden">
-  <Image
-    src="/images/plate-with-pizza.jpg"
-    alt="Plate with pizza"
-    width={500}
-    height={500}
-  />
+<div className="keen-slider__slide opacity-40 rounded-full transition-opacity duration-500 group relative overflow-hidden">
+  <blockquote className="rounded-3xl p-6">
+    <div className="rounded-full overflow-hidden relative">
+      <Image
+        src="/images/perfect-cheese-burger-with-vegetables-wooden-table-black-background-ai-generative.jpg"
+        alt="Perfect Cheese Burger"
+        width={500}
+        height={500}
+        className="transition-all duration-500"
+      />
+      
+      {/* Sliding linear gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent top-[-100%] group-hover:top-0 transition-all duration-500"></div>
+
+      {/* Centered text appearing after the gradient */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
+        Cheese Burger
+      </div>
+    </div>
+  </blockquote>
 </div>
 
-                  
-                </blockquote>
-              </div>
+
+
             </div>
           </div>
 
-          <div className="mt-8 text-center">
-            <span ref={keenSliderActive}></span> / <span ref={keenSliderCount}></span>
-          </div>
+        
 
-          <div className="mt-4 text-center">
-            <button onClick={handlePrevious} className="px-4 py-2 text-white bg-blue-600 rounded">
-              Previous
-            </button>
-            <button onClick={handleNext} className="px-4 py-2 text-white bg-blue-600 rounded">
-              Next
-            </button>
-          </div>
+          <div className="mt-6 text-center flex items-center justify-center gap-4">
+  <button onClick={handlePrevious} className="px-4 py-2 border border-red-500 text-black hover:text-white rounded-full hover:bg-red-600 ">
+  <IoArrowBack />
+  </button>
+
+  <span className="text-lg  mr-5 ml-5 font-semibold">
+    <span ref={keenSliderActive}></span> / <span ref={keenSliderCount}></span>
+  </span>
+
+  <button onClick={handleNext} className="px-4 py-2 border border-red-500 text-black hover:text-white rounded-full hover:bg-red-600 ">
+
+  <IoMdArrowForward />
+  </button>
+</div>
+
+
+  
         </div>
       </section>
+      
+  
+
+
     </div>
   );
 };
