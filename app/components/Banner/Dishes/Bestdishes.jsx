@@ -6,6 +6,7 @@ import Image from "next/image";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowBack } from "react-icons/io5";
 import Button from "../Button";
+import { LuArrowBigRight } from "react-icons/lu";
 
 const Bestdishes = () => {
   const [slider, setSlider] = useState(null);
@@ -120,46 +121,67 @@ const Bestdishes = () => {
 
   return (
     <div>
-      <section className="bg-white">
+      <section className="bg-white relative">
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="flex justify-between items-center">
           <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Read trusted reviews from our customers
+           OUR BEST <span className="text-green-700">CATEGORIES</span>
           </h2>
-
+ <div><button className="relative px-4 py-3  border-2 border-transparent rounded-lg border-r-4 border-b-4 border-r-black border-b-black bg-none text-[#FB9300] font-bold border-t-[#FB9300] border-l-[#FB9300] hover:text-white overflow-hidden group transform transition-all duration-500 ease-out hover:translate-x-4 hover:translate-y-2">
+  <span className="relative z-10  flex items-center gap-2">See All<div className=""><LuArrowBigRight className="text-inherit text-extrabold w-[24px] h-[18px]" />
+  </div></span>
+  
+  {/* Color fill from bottom-left corner */}
+  <span className="absolute inset-0 bg-[#FB9300] transform scale-x-0 scale-y-0 origin-bottom-left group-hover:scale-x-100 group-hover:scale-y-100 transition-transform duration-500 ease-out"></span>
+</button>
+ </div> </div>
           <div className="mt-8">
             <div ref={keenSliderRef} className="keen-slider">
               {/* First Slide */}
-              <div className="keen-slider__slide opacity-40 rounded-full transition-opacity duration-500">
-                <blockquote className="rounded-3xl  p-6  ">
-                <div className="rounded-full overflow-hidden">
-  <Image
+              <div className="keen-slider__slide opacity-40 rounded-full transition-opacity duration-500 group relative overflow-hidden">
+  <blockquote className="rounded-3xl p-6">
+    <div className="rounded-full overflow-hidden relative">
+    <Image
     src="/images/penne-pasta.jpg"
     alt="Plate with pizza"
     width={500}
     height={500}
   />
+      
+      {/* Sliding linear gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent top-[-100%] group-hover:top-0 transition-all duration-500"></div>
+
+      {/* Centered text appearing after the gradient */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
+       Pasta
+      </div>
+    </div>
+  </blockquote>
 </div>
-
-                  
-                </blockquote>
-              </div>
-
               {/* Second Slide */}
-              <div className="keen-slider__slide opacity-40 rounded-full transition-opacity duration-500">
-                <blockquote className="rounded-3xl  p-6  ">
-                <div className="rounded-full overflow-hidden">
-  <Image
+      
+
+
+              <div className="keen-slider__slide opacity-40 rounded-full transition-opacity duration-500 group relative overflow-hidden">
+  <blockquote className="rounded-3xl p-6">
+    <div className="rounded-full overflow-hidden relative">
+    <Image
     src="/images/plate-with-pizza.jpg"
     alt="Plate with pizza"
     width={500}
     height={500}
   />
+      
+      {/* Sliding linear gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent top-[-100%] group-hover:top-0 transition-all duration-500"></div>
+
+      {/* Centered text appearing after the gradient */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
+        Pizza
+      </div>
+    </div>
+  </blockquote>
 </div>
-
-                  
-                </blockquote>
-              </div>
-
               {/* Third Slide */}
 <div className="keen-slider__slide opacity-40 rounded-full transition-opacity duration-500 group relative overflow-hidden">
   <blockquote className="rounded-3xl p-6">
@@ -208,6 +230,7 @@ const Bestdishes = () => {
 
   
         </div>
+     
       </section>
       
   

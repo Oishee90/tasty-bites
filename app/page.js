@@ -1,8 +1,10 @@
+import About from "./components/Banner/About/About";
 import Banner from "./components/Banner/Banner";
 import Button from "./components/Banner/Button";
 import Bestdishes from "./components/Banner/Dishes/Bestdishes";
 
 import Nav from "./components/Banner/Nav";
+import Shop from "./components/Banner/Shop/Shop";
 
 
 export default function Home() {
@@ -11,7 +13,8 @@ export default function Home() {
     <Nav></Nav>
     <Banner></Banner>
     <Bestdishes></Bestdishes>
- 
+   <About></About>
+ <Shop></Shop>
   </div>
   );
 }

@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { gsap } from 'gsap';
 
 const Button = () => {
+
   const [direction, setDirection] = useState('');
+  
 
   const handleMouseEnter = (e) => {
     const target1 = e.target;
@@ -66,12 +68,7 @@ const Button = () => {
       <span className="absolute inset-0 bg-blue-500 transform scale-x-0 scale-y-0 origin-bottom-left group-hover:scale-x-100 group-hover:scale-y-100 transition-transform duration-500 ease-out"></span>
     </button>
     {/* 1 */}
-<button className="relative px-8 py-3 border-2 border-transparent rounded-lg bg-gray-900 text-white overflow-hidden group">
-  <span className="relative z-10">Hover Me</span>
-  
-  {/* Fast Color Fill from left corner */}
-  <span className="absolute inset-0 bg-blue-500 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-</button>
+
 {/* 2 */}
 <button className="relative px-8 py-3 border-2 border-transparent rounded-lg bg-gray-900 text-white overflow-hidden group">
   <span className="relative z-10">Hover Me</span>
@@ -106,7 +103,30 @@ const Button = () => {
     group-hover:left-[-5px] group-hover:top-[-5px] group-hover:right-[-5px] group-hover:bottom-[-5px]">
   </span>
 </button>
+{/* 6 */}
+<button className="relative px-8 py-3 border-2 border-transparent rounded-lg bg-gray-900 text-white overflow-hidden group transform transition-all duration-500 ease-out">
+  <span className="relative z-10">Hover Me</span>
+
+  {/* Color fill based on hover direction */}
+  <span className="absolute inset-0 bg-blue-500 transform scale-x-0 scale-y-0 
+    group-hover:scale-x-100 group-hover:scale-y-100 
+    transition-transform duration-500 ease-out 
+    origin-left  group-hover:origin-top "></span>
+</button>
+
+
+<button className="relative px-8 py-3 border-2 border-transparent rounded-lg
+ bg-gray-900 text-white overflow-hidden group">
+  <span className="relative z-10">Hover Me</span>
+  
+  {/* Fast Color Fill from left corner */}
+  <span className="absolute inset-0 bg-blue-500 transform scale-x-0 origin-left 
+  group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+</button>
     </div>
+
+
+
   );
 };
 

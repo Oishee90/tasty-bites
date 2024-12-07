@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
+import { LiaShippingFastSolid } from "react-icons/lia";
 const Banner = () => {
   useEffect(() => {
     
@@ -104,8 +105,9 @@ const Banner = () => {
   {/* Button */}
 {/* Base Button */}
 <div className="mt-4 mb-5 cursor-pointer">
-<button className="relative px-8 py-3 border-2 border-red-600 rounded-lg bg-none text-white overflow-hidden group transform transition-all duration-500 ease-out hover:translate-x-4 hover:translate-y-2">
-  <span className="relative z-10">Order Now</span>
+<button className="relative px-4 py-3 border-2  md:text-bold md:text-xl border-r-4 border-b-4 border-red-600 border-b-black border-r-black rounded-lg bg-none text-white overflow-hidden group transform transition-all duration-500 ease-out hover:translate-x-4 hover:translate-y-2">
+  <span className="relative z-10 flex items-center gap-2"><div className=""><LiaShippingFastSolid  className="text-inherit text-extrabold w-[24px] h-[18px]" />
+  </div>Order Now</span>
   
   {/* Color fill from bottom-left corner */}
   <span className="absolute inset-0 bg-red-600 transform scale-x-0 scale-y-0 origin-bottom-left group-hover:scale-x-100 group-hover:scale-y-100 transition-transform duration-500 ease-out"></span>

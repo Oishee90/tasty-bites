@@ -13,12 +13,44 @@ const Navbar = () => {
       repeat: -1, // Infinite loop
       yoyo: true, // Reverse the animation
       ease: "power1.inOut", // Smooth transition
-    }); }, []);
+    }); 
  
+    const handleScroll = () => {
+      const navbar = document.getElementById("navbar");
+      if (!navbar) return; // Check if the navbar exists
 
+      if (window.scrollY > 50) {
+        navbar.classList.add(
+          "bg-white/30",
+          "backdrop-blur-md",
+          "border-b",
+          "border-gray-200",
+          "shadow-sm"
+        );
+        navbar.classList.remove("bg-transparent");
+      } else {
+        navbar.classList.remove(
+          "bg-white/30",
+          "backdrop-blur-md",
+          "border-b",
+          "border-gray-200",
+          "shadow-sm"
+        );
+        navbar.classList.add("bg-transparent");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+    
   return (
  
-        <nav className=" top-0 left-0 right-0 z-10 absolute bg-opacity-30 dark:bg-gray-800">
+        <nav id="navbar" className=" top-0 left-0 right-0 z-10 fixed bg-transparent dark:bg-gray-800  transition duration-300">
           <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between">
             <a href="#" className=" pacifico-regular  lg:text-4xl md:text-3xl text-2xl text-black font-extrabold flex">
