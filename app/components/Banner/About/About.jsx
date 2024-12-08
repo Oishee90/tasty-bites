@@ -73,7 +73,7 @@ const About = () => {
           vision, and values.
         </p>
       </div>
-    <div className="h-screen snap-y snap-mandatory overflow-y-scroll"  style={{
+    <div className="h-[550px] snap-y snap-mandatory overflow-y-scroll"  style={{
     backgroundImage: `url('/images/about/fried-chicken-with-vegetables-herbs-aluminum-skillet.jpg')`,
     backgroundSize: 'cover', // ইমেজ পুরোপুরি ভরাট হবে।
     backgroundPosition: 'center', // ইমেজ সেন্টার পজিশনে থাকবে।
@@ -83,7 +83,7 @@ const About = () => {
         <section
           key={index}
           data-index={index}
-          className={`section relative h-[600px] snap-start flex items-center justify-center bg-cover bg-center transition-all duration-100 ease-in-out transform ${
+          className={`section relative h-[550px] snap-start flex items-center justify-center bg-cover bg-center transition-all duration-100 ease-in-out transform ${
             index === currentIndex
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
